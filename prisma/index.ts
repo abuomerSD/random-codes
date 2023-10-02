@@ -14,14 +14,14 @@ async function main(){
                 create: { bio: 'I love Turtles' }
             },
         },
-})
+});
+    console.log('added');
     const allUsers = await prisma.user.findMany({
         include: {
             posts: true,
             profile: true,
         }
     });
-    console.log('added');
     console.dir(allUsers,  { depth: null });
 }
 
