@@ -1,6 +1,13 @@
 const logReq = (req, res, next) => {
-    console.log(req.url+' '+ req.method);
+    console.log("\x1b[32m%s\x1b[0m"  ,`${req.url} ${req.method}`);
     next();
 }
 
-module.exports = { logReq }
+const errorHandler = (err, req, res, next) => {
+    console.log(err.stack);
+    res.status(500).json({
+        "error":"error"
+    });
+}
+
+module.exports = { logReq, errorHandler }
