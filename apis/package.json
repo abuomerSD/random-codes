@@ -1,0 +1,14 @@
+{
+  "name": "apis",
+  "version": "1.0.0",
+  "description": "working with different api;s",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eltayeb Ibrahim",
+  "license": "ISC",
+  "dependencies": {
+    "newsapi": "^2.4.1"
+  }
+}
