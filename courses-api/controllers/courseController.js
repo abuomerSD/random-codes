@@ -7,10 +7,15 @@ const addCourse = asyncWrapper(async (req,res)=> {
         .then((course)=> {
             res.status(201).json({
                 status: "success",
-                data: co
+                data: course
             })
         })
 });
 
+const getAllCourses = async (req, res) => {
+    const courses = await Course.findAll();
+    res.status(200).json(courses);
+}
 
-module.exports = {addCourse}
+
+module.exports = {addCourse, getAllCourses}

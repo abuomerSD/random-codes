@@ -1,20 +1,20 @@
-module.exports  = {
+const httpStatus  = {
     SUCCESS: "success",
     FAIL: "fail",
     ERROR: "error",
 }
 
-const success = (data) => {
+const success = (res, data) => {
     res.json({status: httpStatus.SUCCESS , data});
 }
 
-const fail = (data, statusCode) => {
+const fail = (res, statusCode, data) => {
     return res.status(statusCode).json({status: httpStatus.FAIL , data});
 }
 
-const error = (message, statusCode) => {
+const error = (res, statusCode, message) => {
     return res.status(statusCode).json({status: httpStatus.ERROR, message});
     
 }
 
-// module.exports = {success, fail, error};
+module.exports = {success, fail, error};

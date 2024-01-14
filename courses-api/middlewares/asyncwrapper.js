@@ -1,13 +1,10 @@
 const asyncWrapper = (fn)=> {
-    try{
-        return fn();
+    return (req, res, next) => {
+       fn(req, res, next).catch( (err)=> {
+        next(err);
+       }); 
     }
-    catch(e) {
-        resizeBy.status(400).json({
-            "status": "fail",
-            "data": e.message,
-        })
-    }
+    
 }
 
 module.exports = {asyncWrapper};
