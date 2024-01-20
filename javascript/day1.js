@@ -1,4 +1,4 @@
 let الربح = 10;
 console.log(الربح);
 
-const test;
+const test = 10;
