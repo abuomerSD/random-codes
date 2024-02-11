@@ -1,0 +1,19 @@
+body {
+    background-color: #cdc5bc;
+    /* background-image: url('../images/welcome-banner.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: aliceblue;
+margin: 20px;}
+
+.nav-bar {
+    background-color: cadetblue;
+    padding: 10px 10px;
+    /* margin: 10px; */
+    border: 10px red solid ;
+}
+
+.form-item {
+    display: block;
+    margin-top: 5px;
+}
