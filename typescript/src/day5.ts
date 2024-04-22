@@ -33,9 +33,7 @@ getAllButtons({up: 'jump', right: 'go right', down: 'go down', left: 'go left'})
 
 // tuple 
 
-let article : [number, string, boolean] = [10, 'Node js Roadmap', true];
-
-article.push('test');
+let article : readonly [number, string, boolean] = [10, 'Node js Roadmap', true];
 
 const [id, title, isPublished] = article;
 
