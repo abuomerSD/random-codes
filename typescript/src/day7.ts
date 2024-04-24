@@ -1,9 +1,39 @@
 export class User {
-    private id: number;
-    private username : string;
-    private firstName: string;
-    private lastName: string;
-    private email: string;
+    private _id: number;
+    public get id(): number {
+        return this._id;
+    }
+    public set id(value: number) {
+        this._id = value;
+    }
+    private _username: string;
+    public get username(): string {
+        return this._username;
+    }
+    public set username(value: string) {
+        this._username = value;
+    }
+    private _firstName: string;
+    public get firstName(): string {
+        return this._firstName;
+    }
+    public set firstName(value: string) {
+        this._firstName = value;
+    }
+    private _lastName: string;
+    public get lastName(): string {
+        return this._lastName;
+    }
+    public set lastName(value: string) {
+        this._lastName = value;
+    }
+    private _email: string;
+    public get email(): string {
+        return this._email;
+    }
+    public set email(value: string) {
+        this._email = value;
+    }
 
     constructor(id: number, username: string, firstName : string, lastName: string, email: string){
         this.id = id;
