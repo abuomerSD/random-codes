@@ -9,13 +9,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.dbConnection = void 0;
+exports.DbConnection = exports.sequelize = void 0;
 const sequelize_1 = require("sequelize");
-const sequelize = new sequelize_1.Sequelize('postgres://asdf:""@localhost:5432/bookDb');
+exports.sequelize = new sequelize_1.Sequelize('postgres://asdf:""@localhost:5432/bookDb');
 function testDbConnection() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            yield sequelize.authenticate();
+            yield exports.sequelize.authenticate();
             console.log('Connection has been established successfully.');
         }
         catch (error) {
@@ -23,15 +23,14 @@ function testDbConnection() {
         }
     });
 }
-class dbConnection {
+class DbConnection {
     constructor() {
-        if (!dbConnection.instance) {
-            dbConnection.instance = new sequelize_1.Sequelize('postgres://asdf:""@localhost:5432/bookDb');
+        if (!DbConnection.instance) {
+            DbConnection.instance = new sequelize_1.Sequelize('postgres://asdf:""@localhost:5432/bookDb');
         }
-        return dbConnection.instance;
+        return DbConnection.instance;
     }
 }
-exports.dbConnection = dbConnection;
-let obj1 = new dbConnection();
-let obj2 = new dbConnection();
-console.log(obj1 === obj2);
+exports.DbConnection = DbConnection;
+// const book = new Book();
+// sequelize.sync();

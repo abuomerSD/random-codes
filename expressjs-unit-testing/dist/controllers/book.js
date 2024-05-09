@@ -9,10 +9,18 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.addPost = exports.getAllBooks = void 0;
+exports.addBook = exports.getAllBooks = void 0;
+const book_1 = require("../models/book");
 // return all books as json
-const getAllBooks = (requests, res) => __awaiter(void 0, void 0, void 0, function* () { });
+const getAllBooks = (req, res) => __awaiter(void 0, void 0, void 0, function* () { });
 exports.getAllBooks = getAllBooks;
 // save book to the database
-const addPost = (requests, res) => __awaiter(void 0, void 0, void 0, function* () { });
-exports.addPost = addPost;
+const addBook = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const { title, author, category } = req.body;
+    const book = yield book_1.Book.create({ title, author, category });
+    res.status(201).json({
+        status: "success",
+        data: book,
+    });
+});
+exports.addBook = addBook;

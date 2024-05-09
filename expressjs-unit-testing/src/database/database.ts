@@ -1,27 +1,33 @@
-import {Sequelize} from "sequelize";
+import {
+    Sequelize
+}
+from "sequelize";
+import {
+    Book
+}
+from "../models/book";
 
-const sequelize = new Sequelize('postgres://asdf:""@localhost:5432/bookDb');
+export const sequelize = new Sequelize('postgres://asdf:""@localhost:5432/bookDb');
 
 async function testDbConnection() {
     try {
         await sequelize.authenticate();
         console.log('Connection has been established successfully.');
-    } catch (error) {
+    }
+    catch(error) {
         console.error('Unable to connect to the database:', error);
     }
 }
 
-export class dbConnection {
-    static instance : dbConnection;
+export class DbConnection {
+    static instance: Sequelize;
     constructor() {
-        if (! dbConnection.instance) {
-            dbConnection.instance = new Sequelize('postgres://asdf:""@localhost:5432/bookDb');
+        if(! DbConnection.instance) {
+            DbConnection.instance = new Sequelize('postgres://asdf:""@localhost:5432/bookDb');
         }
-        return dbConnection.instance;
-
+        return DbConnection.instance;
     }
 }
+// const book = new Book();
 
-let obj1 = new dbConnection();
-let obj2 = new dbConnection();
-console.log(obj1 === obj2);
+// sequelize.sync();
