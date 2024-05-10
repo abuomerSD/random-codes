@@ -16,10 +16,10 @@ function testDbConnection() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             yield exports.sequelize.authenticate();
-            console.log('Connection has been established successfully.');
+            console.log("Connection has been established successfully.");
         }
         catch (error) {
-            console.error('Unable to connect to the database:', error);
+            console.error("Unable to connect to the database:", error);
         }
     });
 }

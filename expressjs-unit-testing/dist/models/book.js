@@ -18,4 +18,4 @@ Book.init({
     author: { type: sequelize_1.DataTypes.STRING, allowNull: false },
     category: { type: sequelize_1.DataTypes.STRING, allowNull: false },
 }, { sequelize: database_1.sequelize, timestamps: false });
-database_1.sequelize.sync({ force: true });
+// sequelize.sync({ force: true });

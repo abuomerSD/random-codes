@@ -7,8 +7,10 @@ export const getAllBooks = async (req: Request, res: Response) => {};
 // save book to the database
 export const addBook = async (req: Request, res: Response) => {
   const { title, author, category } = req.body;
+  const book = new Book();
 
-  const book = await Book.create({ title, author, category });
+  
+  const savedBook = await Book.create({ title, author, category });
   res.status(201).json({
     status: "success",
     data: book,

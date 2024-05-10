@@ -1,5 +1,5 @@
-import { DataTypes, Model, Sequelize, UUIDV4 } from "sequelize";
-import { DbConnection, sequelize } from "../database/database";
+import { DataTypes, Model, UUIDV4 } from "sequelize";
+import { sequelize } from "../database/database";
 
 // const con = new DbConnection();
 
@@ -9,12 +9,12 @@ export class Book extends Model {
   static author: string;
   static category: string;
 
-  //   constructor(title: string, author: string, category: string) {
-  //     super();
-  //     this.title = title;
-  //     this.author = author;
-  //     this.category = category;
-  //   }
+    // constructor(title: string, author: string, category: string) {
+    //   super();
+    //   this.title = title;
+    //   this.author = author;
+    //   this.category = category;
+    // }
 }
 
 Book.init(
@@ -32,4 +32,4 @@ Book.init(
   { sequelize, timestamps: false }
 );
 
-sequelize.sync({ force: true });
+// sequelize.sync({ force: true });
