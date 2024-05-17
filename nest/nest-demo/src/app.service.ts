@@ -1,8 +1,13 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Res } from '@nestjs/common';
+import { Response } from 'express';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World! New';
+  findAll():  string{
+    return 'all cats';
+  }
+
+  create(@Res() res: Response): void{
+    res.json({message: 'cat saved'});
   }
 }
