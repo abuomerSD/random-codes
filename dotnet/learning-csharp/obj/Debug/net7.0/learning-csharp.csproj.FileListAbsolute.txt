@@ -1,0 +1,14 @@
+/Users/asdf/Documents/Eltayeb/Code/random-codes/dotnet/learning-csharp/bin/Debug/net7.0/learning-csharp
+/Users/asdf/Documents/Eltayeb/Code/random-codes/dotnet/learning-csharp/bin/Debug/net7.0/learning-csharp.deps.json
+/Users/asdf/Documents/Eltayeb/Code/random-codes/dotnet/learning-csharp/bin/Debug/net7.0/learning-csharp.runtimeconfig.json
+/Users/asdf/Documents/Eltayeb/Code/random-codes/dotnet/learning-csharp/bin/Debug/net7.0/learning-csharp.dll
+/Users/asdf/Documents/Eltayeb/Code/random-codes/dotnet/learning-csharp/bin/Debug/net7.0/learning-csharp.pdb
+/Users/asdf/Documents/Eltayeb/Code/random-codes/dotnet/learning-csharp/obj/Debug/net7.0/learning-csharp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/asdf/Documents/Eltayeb/Code/random-codes/dotnet/learning-csharp/obj/Debug/net7.0/learning-csharp.AssemblyInfoInputs.cache
+/Users/asdf/Documents/Eltayeb/Code/random-codes/dotnet/learning-csharp/obj/Debug/net7.0/learning-csharp.AssemblyInfo.cs
+/Users/asdf/Documents/Eltayeb/Code/random-codes/dotnet/learning-csharp/obj/Debug/net7.0/learning-csharp.csproj.CoreCompileInputs.cache
+/Users/asdf/Documents/Eltayeb/Code/random-codes/dotnet/learning-csharp/obj/Debug/net7.0/learning-csharp.dll
+/Users/asdf/Documents/Eltayeb/Code/random-codes/dotnet/learning-csharp/obj/Debug/net7.0/refint/learning-csharp.dll
+/Users/asdf/Documents/Eltayeb/Code/random-codes/dotnet/learning-csharp/obj/Debug/net7.0/learning-csharp.pdb
+/Users/asdf/Documents/Eltayeb/Code/random-codes/dotnet/learning-csharp/obj/Debug/net7.0/learning-csharp.genruntimeconfig.cache
+/Users/asdf/Documents/Eltayeb/Code/random-codes/dotnet/learning-csharp/obj/Debug/net7.0/ref/learning-csharp.dll
