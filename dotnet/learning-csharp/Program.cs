@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 namespace HelloWorld
 {
     class Program
@@ -58,9 +59,77 @@ namespace HelloWorld
             // string lastName = name.Substring(charPos);
             // Console.WriteLine(lastName);
 
-            int time = 20;
-            string result = (time < 18) ? "day" : "night";
-            Console.WriteLine(result);
+            // int time = 20;
+            // string result = (time < 18) ? "day" : "night";
+            // Console.WriteLine(result);
+
+            // string [] arr = {"eltayeb", "ahmed"};
+            // for(int i = 0; i < arr.Length; i++){
+            //     Console.WriteLine(arr[i]);
+            // }
+
+            // foreach (string name in arr)
+            // {
+            //     Console.WriteLine(name);
+            // }
+
+            // for(int i =0; i < 5; i++) {
+            //     if(i == 3){
+            //         break;
+            //     }
+            //     Console.WriteLine("" + i);
+            // }
+
+            // for(int i = 0; i < 5; i++){
+            //     if(i == 3){
+            //         continue;
+            //     }
+            //     Console.WriteLine(i);
+            // } 
+
+            // string [] arr = new string[4] { "eltayeb", "ahmed", "omer", "masaad"};
+            // string [] names;
+            // names = new string[] { "eltayeb", "ahmed" };
+
+            // string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+            // Array.Sort(cars);
+            // foreach (string car in cars)
+            // {
+            //     Console.WriteLine(car);
+            // }
+
+            // int[] myNumbers = {5, 1, 8, 9};
+            // Console.WriteLine(myNumbers.Max());
+
+            // multidimensional arrays
+
+            // int [,] numbers = {{1,2}, {3,4}};
+            // printTest();
+            // sayHello();
+            // Console.WriteLine(sum(10.02, 20.98));
+            // Console.WriteLine(sum(3,4));
+
+            Car car= new Car("Toyota");
+            Console.WriteLine(car.name);
+            Console.WriteLine(car);
+
         }
+
+        // static void printTest(){
+        //     Console.WriteLine("Test");
+        // }
+
+        // static void sayHello(string name = "Eltayeb"){
+        //     string x = " ds";
+        //     Console.WriteLine($"Hello {name + x}");
+        // }
+
+        // static double sum(double x , double y) {
+        //     return x + y;
+        // }
+
+        // static int sum(int x , int y) {
+        //     return x + y;
+        // }
     }
 }
