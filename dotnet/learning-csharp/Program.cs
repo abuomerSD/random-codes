@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.IO;
 namespace HelloWorld
 {
     class Program
@@ -109,9 +110,17 @@ namespace HelloWorld
             // Console.WriteLine(sum(10.02, 20.98));
             // Console.WriteLine(sum(3,4));
 
-            Car car= new Car("Toyota");
-            Console.WriteLine(car.name);
-            Console.WriteLine(car);
+            // Car car= new Car("Toyota");
+            // Console.WriteLine(car.name);
+            // Console.WriteLine(car);
+
+            // Car car = new Car("Toyota");
+            // Console.WriteLine(car.name);
+
+
+            File.WriteAllText("filename.txt", "Hello World");
+            string txt = File.ReadAllText("filename.txt");
+            Console.WriteLine(txt);
 
         }
 
