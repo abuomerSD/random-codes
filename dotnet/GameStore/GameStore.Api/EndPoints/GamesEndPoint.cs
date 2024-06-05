@@ -1,3 +1,4 @@
+using GameStore.Api.Dtos;
 using GameStore.Api.Entities;
 using GameStore.Api.Respositories;
 // using Microsoft.AspNetCore.Builder;
@@ -15,7 +16,7 @@ public static class GamesEndPoint
         var group = routes.MapGroup("/games")
                 .WithParameterValidation();
     
-        group.MapGet("/", (IGameRepository repository) => repository.GetALL());
+        group.MapGet("/", (IGameRepository repository) => repository.GetALL().Select(game => game.AsDto()));
 
         group.MapGet("/{id}", (IGameRepository repository, int id) => 
         {
@@ -23,10 +24,17 @@ public static class GamesEndPoint
             if (game is null){
                 return Results.NotFound();
             }
-            return Results.Ok(game);
+            return Results.Ok(game.AsDto());
         }).WithName(GetGameEntPointName);
 
-        group.MapPost("/", (IGameRepository repository, Game game)=> {
+        group.MapPost("/", (IGameRepository repository, CreateGameDto gameDto)=> {
+            Game game  = new(){
+                Name = gameDto.Name,
+                Genre = gameDto.Genre,
+                Price = gameDto.Price,
+                ReleaseDate = gameDto.ReleaseDate,
+                ImageUri = gameDto.ImageUri
+            };
             repository.Create(game);
 
             return Results.CreatedAtRoute(GetGameEntPointName, new {id = game.Id}, game);
