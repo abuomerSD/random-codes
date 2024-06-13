@@ -5,26 +5,23 @@ var app = builder.Build();
 
 var key1 = app.Configuration.GetValue<string>("MyKey");
 
-app.MapGet("/", () => key1);
+app.MapGet(
+    "/",
+    () =>
+    {
+        throw new Exception("test ex");
+    }
+);
 
 // app.UseAuthentication();
 // app.UseAuthorization();
+// DefaultFilesOptions defaultFilesOptions = new DefaultFilesOptions();
+// defaultFilesOptions.DefaultFileNames.Clear();
+// defaultFilesOptions.DefaultFileNames.Add("foo.html");
 
-app.Use(
-    async (context, next) =>
-    {
-        Console.WriteLine("middleware1");
-        await next.Invoke();
-    }
-);
+// app.UseDefaultFiles(defaultFilesOptions);
 
-app.Use(
-    async (context, next) =>
-    {
-        Console.WriteLine("middleware2");
-        await context.Response.WriteAsync("middleware2");
-        await next.Invoke();
-    }
-);
+// app.UseDefaultFiles();
+app.UseStaticFiles();
 
 app.Run();
